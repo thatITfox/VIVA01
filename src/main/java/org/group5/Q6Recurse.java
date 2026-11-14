@@ -76,11 +76,10 @@ public class Q6Recurse {
             index++;
         }
 
-        for (int i = 1; i < reps; i++) result += result;
-        // the reason why I made the i var start with one is because we're adding
-        // an already existing sub string with itself. not a new empty string like before.
+        String fullres = "";
+        for (int i = 0; i < reps; i++) fullres += result;
 
-        return result;
+        return fullres;
     }
 
     public static void main(String[] args) {
