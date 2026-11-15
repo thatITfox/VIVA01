@@ -58,14 +58,18 @@ public class Q6Recurse {
             char passchar = pass.charAt(index);
 
             if (passchar == '[') {
-                index++;
+                index++; // move the index to start of D of [DX]
                 int subreps = getReps(pass, index);
+                // if reps is bigger than 9, that means the start of the
+                // substring is more in front.
                 if (subreps > 9) index++;
 
-                index++;
+                index++; // moves index to the actual start of the substring.
 
+                // starts the next level of decompression
                 String substr = decompress(pass, subreps);
 
+                // appends the decompresses string to result
                 result += substr;
 
                 index++;
@@ -76,6 +80,7 @@ public class Q6Recurse {
             index++;
         }
 
+        // does the repetition or decompression.
         String fullres = "";
         for (int i = 0; i < reps; i++) fullres += result;
 
