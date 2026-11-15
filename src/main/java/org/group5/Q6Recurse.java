@@ -72,6 +72,7 @@ public class Q6Recurse {
                 // appends the decompresses string to result
                 result += substr;
 
+                // moves the index pointer after the ']' character
                 index++;
                 continue;
             }
