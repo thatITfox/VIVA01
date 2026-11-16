@@ -1,8 +1,8 @@
-package com.mycompany.viva1;
+package org.group5;
 import java.util.Scanner;
 
 //Viva 1 Q2
-public class Viva1 {
+public class Q2 {
     
     public static int reverse(int n){
         int result = 0;
