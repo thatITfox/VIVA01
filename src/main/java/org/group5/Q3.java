@@ -15,7 +15,7 @@ public class Q3 {
                 } 
         // this is for subtask 3, it just says L mst not be 
         more that 10^6,that's all        */
-        /* if ((s.length>(L-1))||(s.length>(L-1))){
+        /* if (s.length()!=(L-1)){
        System.out.print("|S| must be equal to L-1");
        return; }
        // this is for subtask 1*/
