@@ -9,10 +9,16 @@ public class Q3 {
         String s = in.nextLine();
         System.out.print("enter L: ");
         long L = in.nextLong();
-        if (L > (Math.pow(10, 6))) {
+       /* if (L > (Math.pow(10, 6))) {
             System.out.println("too much");
             return;
-        }
+                } 
+        // this is for subtask 3, it just says L mst not be 
+        more that 10^6,that's all        */
+        /* if ((s.length>(L-1))||(s.length>(L-1))){
+       System.out.print("|S| must be equal to L-1");
+       return; }
+       // this is for subtask 1*/
         int[] freq = new int[128];
         int freq1 = freq[0];
         for (int i = 0; i < s.length(); i++) {
