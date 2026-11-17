@@ -24,16 +24,15 @@ public class Q3 {
         for (int i = 0; i < s.length(); i++) {
             freq[s.charAt(i)]++;
         }
-        for (int i = 0; i < 128; i++) {
-            if (freq[i] > freq1) {
-                freq1 = freq[i];
-            }
-        }
+        System.out.print("choose an index of a character: ");
+        int choice= in.nextInt();
+         char chosenChar = s.charAt(choice);
+                long currentFreq = freq[chosenChar];
         long lnow = s.length();
         int ope = 0;
         while (lnow < L) {
-            lnow += freq1;
-            freq1 *= 2;
+            lnow += currentFreq;
+            currentFreq *= 2;
             ope++;
         }
         System.out.println(ope);
