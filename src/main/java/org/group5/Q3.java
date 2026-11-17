@@ -9,24 +9,25 @@ public class Q3 {
         String s = in.nextLine();
         System.out.print("enter L: ");
         long L = in.nextLong();
+        in.nextLine(); 
        /* if (L > (Math.pow(10, 6))) {
             System.out.println("too much");
             return;
                 } 
-        // this is for subtask 3, it just says L mst not be 
+        // this is for subtask 3, it just says L must not be 
         more that 10^6,that's all        */
         /* if (s.length()!=(L-1)){
        System.out.print("|S| must be equal to L-1");
        return; }
        // this is for subtask 1*/
         int[] freq = new int[128];
-        int freq1 = freq[0];
-        for (int i = 0; i < s.length(); i++) {
+                for (int i = 0; i < s.length(); i++) {
             freq[s.charAt(i)]++;
         }
-        System.out.print("choose an index of a character: ");
-        int choice= in.nextInt();
-         char chosenChar = s.charAt(choice);
+        
+        System.out.print("choose a character: ");
+        String choice= in.nextLine();
+         char chosenChar = choice.charAt(0); 
                 long currentFreq = freq[chosenChar];
         long lnow = s.length();
         int ope = 0;
